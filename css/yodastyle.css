@@ -1,0 +1,7 @@
+html{
+ background-image: url(../img/agua.jpg);
+ background-size: cover;
+ background-position: top center;
+ position: relative;
+ z-index: 2;
+}

@@ -1,0 +1,495 @@
+/*----------------------*/
+/*--MAIN PAGE SETTINGS--*/
+/*----------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+html{
+    font-size: 8px;
+    scroll-behavior: smooth;
+    background-color: #202022;
+}
+a{
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/*---------------------------------*/
+/*--PRESENTATION BACKGROUND IMAGE--*/
+/*---------------------------------*/
+
+#figure{
+    background-image: url(../img/panodefuldo.webp);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 2;
+}
+.presentation_figure{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: top;
+    justify-content: center;
+}
+
+/*----------------------------*/
+/*--PAGE PRESENTATION BUTTON--*/
+/*----------------------------*/
+
+#button{
+    color: #ffffff;
+    font-family: 'Heebo', sans-serif;
+    font-size: 21px;
+}
+.btn{
+    position: absolute;
+    top: 59rem;
+    right: 80rem;
+}
+.btn{
+    background-image: linear-gradient(35deg, #ac2fa7, #1c1b29);
+    padding: 15px 25px;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btn:hover{
+    animation-name: effect;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/*-----------------------*/
+/*--HOME SCREEN DISPLAY--*/
+/*-----------------------*/
+
+#presentation h1{
+    top: 10%;
+    display: block;
+    width: fit-content;
+    font-size: 13em;
+    font-family: 'Oswald', sans-serif;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1.4s;
+}
+#presentation h1:nth-child(1){
+animation-delay: .9s;
+}
+#presentation h1:nth-child(2){
+animation: text_reveal2 .5s ease forwards;
+animation-delay: 2.1s;
+}
+#presentation h1:nth-child(3){
+animation-delay: 1.5s;
+}
+
+/*-------------------*/
+/*--NAVIGATION MENU--*/
+/*-------------------*/
+
+.size{
+    font-size: 40px;
+    color: #ffffff;
+}
+.soon{
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ffffff;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 400;
+}
+#navigation{
+    position: sticky;
+    top: 0%;
+    bottom: 100%;
+    z-index: 1;
+}
+nav{
+    width: 100%;
+    height: 88px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #2d2d3b;
+}
+.links{
+    list-style: none;
+    display: flex;
+}
+.links li:hover{
+    transition: ease;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
+.links a{
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+/*----------------*/
+/*--WARNING CHAT--*/
+/*----------------*/
+
+#chat-box{
+    min-width: 150px;
+    margin-top: 150px;
+    margin-left: 80px;
+    margin-right: 80px;
+    box-shadow: 5px 10px 15px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    background-image: linear-gradient(135deg, #1c1b29, #ac2fa7)
+}
+#chat-box>h1{
+    color: #ffffff;
+    font-size: 40px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#chat-box>p{
+    color: #ffffff;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*-------------*/
+/*--PORTFOLIO--*/
+/*-------------*/
+
+#portfolio{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+#portfolio2{
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.5rem;
+}
+.portfolio-post{
+    width: 100%;
+    max-width: 98rem;
+    padding: 5em;
+    background-color: #ffffff;
+    box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    border-radius: .8rem;
+}
+.portfolio-post_img{
+    min-width: 35rem;
+    max-width: 35rem;
+    height: 30rem;
+    transform: translateX( -8rem);
+    position: relative;
+}
+#portfolio2 .portfolio-post_img{
+    transform: translateX( 61rem);
+}
+.portfolio-post_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: .8rem;
+}
+.portfolio-post_img::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(79, 172, 254, .8) rgba(0, 242, 254, .8));
+    box-shadow: .5rem .5rem 3rem 1px rgba(0, 0, 0, .05);
+    border-radius: .8rem;
+}
+.portfolio-post_date span{
+    display: block;
+    color: rgba(0, 0, 0, .5);
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: .5rem 0;
+}
+#portfolio2 .portfolio-post_date span{
+    margin: 1.5rem -35rem 2rem;
+}
+.portfolio-post_title{
+    font-size: 2.5rem;
+    margin: 1.5rem 0 2rem;
+    text-transform: uppercase;
+    color: #1c1b29;
+}
+#portfolio2 .portfolio-post_title{
+    margin: 1.5rem -14em 2rem;
+}
+.portfolio-post_text{
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, .7);
+}
+#portfolio2 .portfolio-post_text{
+    margin: 1.5rem -35rem 2rem;
+}
+.portfolio-post_cta{
+    display: inline-block;
+    padding: 1.5rem 3rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-image: linear-gradient(to right, #1c1b29 0%, #ac2fa7 100%);
+    border-radius: .8rem;
+    text-decoration: none; 
+}
+.portfolio-post_cta:hover{
+    background-image: linear-gradient(to right, #ac2fa7 0%, #1c1b29 100%);
+}
+#portfolio2 .portfolio-post_cta{
+    margin: 1.5rem -35rem 2rem;
+}
+
+/*---------*/
+/*--CARDS--*/
+/*---------*/
+
+#body-cards{
+    height: 100vh;
+    display: grid;
+    place-items: center center;
+    font-family: monospace;
+}
+.cards{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    padding: 10px;
+    grid-gap: 100px;
+    transform: scale(0.8);
+}
+.card{
+    background: #1c1b29;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.18);
+}
+.card-container{
+    position: relative;
+    clip-path: polygon(0 0,100% 0, 100% 
+    85%, 0 100%);
+}
+.img-card{
+    display: block;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+.card-container::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20px 20px 0 0;
+    opacity: 0.7;
+
+}
+
+/*---------------*/
+/*--CARDS AFTER--*/
+/*---------------*/
+
+.card1>.card-container::after{
+    background-image: linear-gradient(135deg, #0100ec, #fb36f4);
+}
+.card2>.card-container::after{
+    background-image: linear-gradient(135deg, #0100ec, #fb36f4);
+}
+.card3>.card-container::after{
+    background-image: linear-gradient(135deg, #0100ec, #fb36f4);
+}
+
+/*---------------*/
+/*--CARDS HOVER--*/
+/*---------------*/
+
+.card1:hover{
+    transform: scale(1.1);
+    transition: 1.0s ease;
+}
+.card2:hover{
+    transform: scale(1.1);
+    transition: 1.0s ease;
+}
+.card3:hover{
+    transform: scale(1.1);
+    transition: 1.0s ease;
+}
+.details{
+    padding: 20px 10px;
+}
+.details>h3{
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10px 0 15px 0;
+}
+.details>p{
+    color: #a0a0a0;
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+/*----------*/
+/*--FOOTER--*/
+/*----------*/
+
+#footer{
+    width: 100%;
+    height: 95px;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Heebo', sans-serif;
+    background: #2d2d3b;
+    color: #ffffff;
+}
+#footer h2{
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#footer p{
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*-------------*/
+/*--KEYFRAMES--*/
+/*-------------*/
+
+@keyframes effect{
+    0%{
+        transform: scale(1);
+        background-image: linear-gradient(135deg, #1c1b29, #ac2fa7)
+    }
+    100%{
+        transform: scale(1.05);
+        background-image: linear-gradient(135deg, #ac2fa7, #1c1b29)
+    }
+}
+@keyframes text_reveal{
+    100%{
+        color: #FFF8DC;
+    }
+}
+@keyframes text_reveal2{
+    100%{
+        color: #23232e;
+    }
+}
+
+/*----------------*/
+/*--MEDIA SCREEN--*/
+/*----------------*/
+
+@media screen and (max-width: 1150px){
+    #footer{margin-top: 50rem;}
+}
+
+@media screen and (max-width: 900px){
+    .portfolio-post{max-width: 80rem;}
+    .portfolio-post_img{min-width: 30rem; max-width: 30rem;}
+    #footer{margin-top: 50rem;}
+    
+    /*--ORGANIZED BY PORTFOLIO2 SIZES--*/
+    #portfolio2 .portfolio-post_img{transform: translateX( 48rem);}
+    #portfolio2 .portfolio-post_date span{margin: 0rem -30rem 0rem;}
+    #portfolio2 .portfolio-post_title{margin: 1.5rem -30rem 2rem;}
+    #portfolio2 .portfolio-post_text{margin: 1.5rem -30rem 2rem;}
+    #portfolio2 .portfolio-post_cta{transform: translateX( 5rem);}
+
+} @media screen and (max-width: 800px){
+     .portfolio-post{
+         max-width: 70rem;
+     }
+ 
+ }
+ 
+ @media screen and (max-width: 800px){
+    #footer{margin-top: 150rem;}
+    .soon{
+        font-size: 25px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-left: 5px;
+    }
+    .links a{
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-left: 30px;
+    }
+    .portfolio-post{
+        padding: 1.5rem;
+        flex-direction: column;
+        margin-top: 80px;
+     }
+ 
+     .portfolio-post_img{
+        min-width: 100%;
+        max-width: 100%;
+        transform: translate(0, -8rem);
+     }
+
+    /*--ORGANIZED BY PORTFOLIO2 SIZES--*/
+    #portfolio2{height: 80vh;}
+    #portfolio2 .portfolio-post_img{bottom: 70px; transform: translateX( 0rem);}
+    #portfolio2 .portfolio-post_date span{margin: 0rem 0rem 0rem;}
+    #portfolio2 .portfolio-post_title{margin: 1.5rem 0rem 2rem;}
+    #portfolio2 .portfolio-post_text{margin: 1.5rem 0rem 2rem;}
+    #portfolio2 .portfolio-post_cta{transform: translateX( 35rem);}
+ }
+
+@media screen and (max-width: 700px){
+    #footer{margin-top: 150rem;}
+}
+
+@media screen and (max-width: 720px){
+    #footer{margin-top: 150rem;}
+    .soon{
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-left: 5px;
+    }
+    .links a{
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-left: 30px;
+    }
+}
